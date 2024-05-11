@@ -5,6 +5,7 @@ export default class ProductController{
         this.productRepo = new ProductRepository()
     }
 
+    // to add new product to the data
     async addProduct(req,res,next){
         try{
             const item = await this.productRepo.addProduct(req.body)
@@ -18,6 +19,7 @@ export default class ProductController{
         }
     }
 
+    // get all the product from the db
     async getAllProduct(req,res,next){
         try{
             const items = await this.productRepo.getAllProduct();
@@ -30,6 +32,7 @@ export default class ProductController{
         }
     }
 
+    // update the product quantity
     async updateProduct(req,res,next){
         try{
             const id = req.params.id;
@@ -47,6 +50,7 @@ export default class ProductController{
         }
     }
 
+    // delet the product
     async deleteProduct(req,res,next){
         try{
             const id = req.params.id;

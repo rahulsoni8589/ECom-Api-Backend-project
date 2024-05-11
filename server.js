@@ -10,6 +10,7 @@ const app = express();
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
+// product routes
 app.use("/api/products", productRouter)
 
 // Setting the Error handler for application

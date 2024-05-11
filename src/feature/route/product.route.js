@@ -3,8 +3,8 @@ import ProductController from "../controller/product.controller.js";
 
 const productRouter = express.Router();
 const productController = new ProductController;
-//product Api
 
+//product Routes
 productRouter.put("/:id/update_quantity",(req,res,next)=>{
     productController.updateProduct(req,res,next)
 })
